@@ -15,3 +15,5 @@ before run the tool you need register a twitter developer account and create a p
 After that, you need to edit the twconsumerkey.list file by using format "twitter account;consumerkey"
 
 Demo is here: "http://54.189.14.27:8888/" but I removed "twconsumerkey.list" so you can't run it directly anymore.
+
+Don't forget install jq and json-query, I already uploaded the json_query-0.0.2-py2-none-any.whl
