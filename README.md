@@ -1,6 +1,6 @@
 "twflood_php" is used to post tweets automaticly.
 
-![](https://raw.githubusercontent.com/anonymousadm/twflood_php/main/screenshot/2021-01-10_00-08-02.jpg)
+<img src="screenshot/2021-01-10_00-08-02.jpg">
 
 Select image file that you want to post.
 
@@ -17,3 +17,18 @@ After that, you need to edit the twconsumerkey.list file by using format "twitte
 Demo is here: "http://54.189.14.27:8888/" but I removed "twconsumerkey.list" so you can't run it directly anymore.
 
 Don't forget install jq and json-query, I already uploaded the json_query-0.0.2-py2-none-any.whl
+
+After install the json-query need to use vi to edit /usr/local/bin/json-query like following:
+
+```
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from jsonquery.jsonquery import main
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
+```
